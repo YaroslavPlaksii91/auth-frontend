@@ -1,0 +1,12 @@
+.btn {
+  height: 35px;
+  font-weight: 500;
+  border-radius: 4px;
+  background-color: orange;
+  transition: background-color 250ms ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: orangered;
+}

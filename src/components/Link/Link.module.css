@@ -1,0 +1,10 @@
+.link {
+  font-weight: 600;
+  color: orangered;
+  transition: color 250ms ease;
+}
+
+.link:hover,
+.link:focus {
+  color: orange;
+}

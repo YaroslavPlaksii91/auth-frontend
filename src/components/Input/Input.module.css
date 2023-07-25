@@ -1,0 +1,30 @@
+.inputWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.input {
+  height: 35px;
+  padding: 5px;
+  outline: none;
+  border-color: transparent;
+  border-radius: 4px;
+}
+
+.input:focus {
+  border-color: lightblue;
+}
+
+.inputError {
+  composes: input;
+  border-color: red;
+}
+
+.errorMessage {
+  color: red;
+}

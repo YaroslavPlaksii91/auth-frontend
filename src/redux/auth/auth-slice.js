@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import authOperations from "./auth-operations";
+import { authOperations } from "./auth-operations";
 
 export const authSlice = createSlice({
   name: "auth",
@@ -17,7 +17,7 @@ export const authSlice = createSlice({
   extraReducers: {
     [authOperations.register.fulfilled](state, { payload }) {
       state.user = payload.user;
-      state.token = payload.token;
+      // state.token = payload.token;
       state.isLoggedIn = true;
     },
     [authOperations.logIn.fulfilled](state, { payload }) {
