@@ -15,7 +15,7 @@ const token = {
 const register = createAsyncThunk("auth/signup", async (credentials) => {
   try {
     const { data } = await axios.post("users/signup", credentials);
-    // token.set(data.data.token);
+    token.set(data.data.token);
 
     return data.data;
   } catch (error) {
@@ -36,7 +36,7 @@ const logIn = createAsyncThunk("auth/login", async (credentials) => {
 
 const logOut = createAsyncThunk("auth/logout", async () => {
   try {
-    await axios.post("users/logout");
+    await axios.get("users/logout");
     token.unset();
   } catch (error) {
     console.log(error);
@@ -56,6 +56,7 @@ const fetchCurrentUser = createAsyncThunk(
     token.set(persistedToken);
     try {
       const { data } = await axios.get("users/current");
+
       return data.data.user;
     } catch (error) {
       console.log(error);

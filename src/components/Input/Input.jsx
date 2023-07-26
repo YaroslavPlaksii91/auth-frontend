@@ -21,7 +21,6 @@ export const Input = ({
         type={type}
         placeholder={placeholder}
         defaultValue={defaultValue}
-        autoComplete={false}
         className={`${errors[name] ? s.inputError : s.input} `}
         {...register}
       />
